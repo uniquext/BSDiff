@@ -5,7 +5,7 @@
 
 cmake_minimum_required(VERSION 3.18.1)
 # 设置头文件查找路径
-include_directories(bzip2 bsdiff)
+include_directories(bzip2 core)
 
 # 把 bzip2 目录下的原文件用 BZIP2_SOURCE 变量表示
 aux_source_directory( # 相对目录
@@ -13,7 +13,7 @@ aux_source_directory( # 相对目录
         # 变量名
         BZIP2_SOURCE )
 aux_source_directory( # 相对目录
-        bsdiff
+        core
         # 变量名
         BSDIFF_SOURCE )
 

@@ -1,11 +1,8 @@
 package com.uniquext.bsdiff;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.TextView;
 
-import com.uniquext.bsdiff.databinding.ActivityMainBinding;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
