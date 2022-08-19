@@ -4,6 +4,11 @@
 # Sets the minimum version of CMake required to build the native library.
 
 cmake_minimum_required(VERSION 3.18.1)
+
+# Declares and names the project.
+
+project("bsdiff")
+
 # 设置头文件查找路径
 include_directories(bzip2 core)
 
@@ -18,23 +23,18 @@ aux_source_directory( # 相对目录
         BSDIFF_SOURCE )
 
 
-
-# Declares and names the project.
-
-project("bsdiff")
-
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
-add_library( # 生成的so文件名，最终会生成libbspatch_utlis.so文件
+add_library( # Sets the name of the library.
         bsdiff
 
         # Sets the library as a shared library.
         SHARED
 
-        # 参与编译的源码.
+        # Provides a relative path to your source file(s).
         bsdiff.cpp
         ${BZIP2_SOURCE}
         ${BSDIFF_SOURCE} )
